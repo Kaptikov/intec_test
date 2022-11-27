@@ -1,0 +1,137 @@
+// @keyframes linearGradientMove {
+//   100% {
+//     background-position: 12.5% 0, -12.5% 100%, 0 -12.5%, 100% 12.5%;
+//   }
+// }
+
+.header {
+  position: absolute;
+  top: 18px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+
+  // .header__container
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .header__logo
+  &__logo {
+    // margin-right: 65.22px;
+  }
+
+  // .header__menu
+  &__menu {
+    // margin-right: 67px;
+  }
+
+  // .header__contacts
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    // width: 192px;
+    height: 42px;
+    // padding-right: 18px;
+  }
+
+  // .header__contacts-tel
+  &__contacts-tel {}
+
+  &__contacts-tel:hover .header__arrow {
+    transform: rotateZ(-180deg);
+  }
+
+  // &__contacts-tel::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 3px;
+  //   width: 10px;
+  //   height: 5px;
+  //   padding-right: -8px;
+  //   background: url(../img/arrow.svg) 0 0 no-repeat;
+  // }
+
+  &__contacts-tel .tel1 {
+    margin-right: 10px;
+    color: $bgColor;
+  }
+
+  &__arrow {
+    margin-left: 8px;
+    transition: 0.3s ease-in-out;
+  }
+
+  // .header__contacts-call
+  &__contacts-call {
+    position: relative;
+    font-family: Montserrat-Regular;
+    font-size: 12px;
+    line-height: 18px;
+    color: #2D2D2D;
+    // outline: 1px dashed #2D2D2D;
+    // outline-offset: -1px;
+    transition: outline .5s;
+    // border-bottom: 1px dashed #2D2D2D;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-position: under;
+    margin-right: 23px;
+
+    // &:hover {
+    //   // text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    //   // box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+    //   outline: none;
+    //   border-bottom: none;
+    //   background:
+    //     linear-gradient(90deg, #2D2D2D 50%, transparent 0) repeat-x,
+    //     linear-gradient(90deg, #2D2D2D 50%, transparent 0) repeat-x,
+    //     linear-gradient(0deg, #2D2D2D 50%, transparent 0) repeat-y,
+    //     linear-gradient(0deg, #2D2D2D 50%, transparent 0) repeat-y;
+    //   background-size: 0 0, 5px 1px, 0 0, 0 0;
+    //   background-position: 0 0, 0 100%, 0 0, 100% 0;
+    //   animation: linearGradientMove .5s infinite linear;
+    // }
+  }
+
+  // &__contacts-call::after {
+  //   content: "";
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   border: 1px dashed #2D2D2D;
+  //   animation: dashed-line infinite linear;
+  // }
+
+  &__contacts-call:hover .header__arrow {
+    animation-name: dashed-line;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+}
+
+.menu {
+
+  // .menu__list
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  // .menu__item
+  &__item {}
+
+  &__item:not(:last-child) {
+    padding-right: 42px;
+  }
+
+  // .menu__link
+  &__link {}
+}
