@@ -96,9 +96,9 @@ const body = document.body
 
 burger?.addEventListener('click', () => {
   body.classList.toggle('stop--scroll')
-  burger?.classList.toggle('burger--active')
-  burgerBtn?.classList.toggle('burger__btn--active')
-  menu?.classList.toggle('header__container-second--visible')
+  // burger?.classList.toggle('burger--active')
+  burger?.classList.toggle('burger-btn--active')
+  menu?.classList.toggle('header__burger--visible')
   logo?.classList.toggle('burger-menu__logo--visible')
 
   if (burger.classList.contains('burger--active')) {
@@ -122,7 +122,7 @@ burger?.addEventListener('click', () => {
 menuItems.forEach(el => {
   el.addEventListener('click', () => {
     body.classList.remove('stop--scroll')
-    burger?.classList.remove('burger--active')
-    menu?.classList.remove('header__container-second--visible')
+    burger?.classList.remove('burger-btn--active')
+    menu?.classList.remove('header__burger--visible')
   })
 })
