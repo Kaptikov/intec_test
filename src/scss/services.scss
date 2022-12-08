@@ -1,9 +1,37 @@
 .services {
-  background: url(../img/lines.png) center 168.39px no-repeat;
+  position: relative;
+  background: url(../img/services-bg.svg) no-repeat center 168px;
 
   // .services__container
   &__container {
     padding-bottom: 216px;
+    // z-index: 3;
+  }
+
+  &__foreignObject {
+    max-width: 1096px;
+    width: 100%;
+    height: 330px;
+  }
+
+  &__line {
+    max-width: 1938px;
+    width: 100%;
+    height: 1988px;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 272px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  &__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   // .services__title

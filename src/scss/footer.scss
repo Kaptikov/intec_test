@@ -54,6 +54,10 @@
     font-size: 15px;
     line-height: 16px;
     color: #FFFFFF;
+
+    &:hover {
+      color: $bgColor;
+    }
   }
 
   // .footer__menu
@@ -124,6 +128,10 @@
     font-size: 14px;
     line-height: 27px;
     color: #777E89;
+
+    &:hover {
+      color: #FFFFFF;
+    }
   }
 }
 
@@ -141,7 +149,7 @@
     border: 1px solid #FFFFFF;
     color: #BFBFBD;
     border-radius: 3px;
-    padding: 0 0 0 18px;
+    padding: 0 36px 0 18px;
   }
 
   // .form-footer__btn
@@ -185,9 +193,14 @@
     &_map {
       font-size: 14px;
       line-height: 20px;
+      width: max-content;
       margin-left: 1px;
       padding-left: 26px;
       background: url(../img/map.svg) left no-repeat;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     &_map .map {
@@ -206,10 +219,13 @@
       font-family: Montserrat-Bold;
       font-size: 16px;
       line-height: 23px;
-      // background: url(../img/tel.svg) 0 0 no-repeat;
       color: #FFFFFF;
       margin-bottom: 15px;
       white-space: nowrap;
+
+      &:hover {
+        color: $bgColor;
+      }
     }
 
     &_tel .tel2 {
@@ -226,12 +242,16 @@
       height: 41px;
       background-color: $bgColor;
       border-radius: 3px;
-      transition: transform 0.3s ease-in-out;
+      transition: background 0.3s ease-in-out;
 
       &:hover {
+        background: transparent;
         border: 1px solid #DC911B;
-        border-radius: 5px;
-        transform: scale(90%);
+      }
+
+      &:active {
+        transform: scale(97%);
+        transition: transform 0.1s;
       }
     }
   }

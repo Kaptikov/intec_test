@@ -47,16 +47,6 @@
     transform: rotateZ(-180deg);
   }
 
-  // &__contacts-tel::after {
-  //   content: "";
-  //   position: absolute;
-  //   top: 3px;
-  //   width: 10px;
-  //   height: 5px;
-  //   padding-right: -8px;
-  //   background: url(../img/arrow.svg) 0 0 no-repeat;
-  // }
-
   &__contacts-tel .tel1 {
     margin-right: 10px;
     color: $bgColor;
@@ -77,13 +67,14 @@
     // outline: 1px dashed #2D2D2D;
     // outline-offset: -1px;
     transition: outline .5s;
-    border-bottom: 1px dashed #2D2D2D;
-    // text-decoration: underline;
+    // border-bottom: 1px dashed #2D2D2D;
+    text-decoration: underline;
     text-decoration-style: dashed;
     text-underline-position: under;
     margin-right: 23px;
 
     &:hover {
+      // border-bottom: none;
       text-decoration: none;
     }
 
@@ -138,7 +129,7 @@
   &__item {}
 
   &__item:not(:last-child) {
-    padding-right: 42px;
+    margin-right: 42px;
   }
 
   // .menu__link
@@ -204,69 +195,10 @@
 }
 
 @media (max-width: 1200px) {
-  // .header {
-  //   // top: 0;
-  //   // left: none;
-  //   right: 0;
-  //   max-width: 400px;
-  //   width: 100%;
-  //   height: 100%;
-  //   background: #fff;
-
-  //   // .header__container
-  //   &__container {}
-
-  //   // .header__logo
-  //   &__logo {}
-
-  //   // .header__menu
-  //   &__menu {}
-
-  //   // .header__contacts
-  //   &__contacts {}
-
-  //   // .header__contacts-tel
-  //   &__contacts-tel {}
-
-  //   // .header__arrow
-  //   &__arrow {}
-
-  //   // .header__contacts-call
-  //   &__contacts-call {}
-
-  //   // .header__burger-btn
-  //   &__burger-btn {}
-  // }
-
-  // .menu {
-
-  //   // .menu__list
-  //   &__list {}
-
-  //   // .menu__item
-  //   &__item {}
-
-  //   // .menu__link
-  //   &__link {}
-  // }
-
-  // .tel1 {}
-
-  // .burger-btn {
-
-  //   // .burger-btn__line
-  //   &__line {}
-  // }
-
   .header {
     &__burger-btn {
-      // position: absolute;
       display: block;
       z-index: 5;
-    }
-
-    &__logo {
-      flex-grow: 1;
     }
 
     &__menu {
@@ -274,6 +206,7 @@
     }
 
     &__contacts {
+      flex-grow: 1;
       margin-right: 30px;
     }
 
