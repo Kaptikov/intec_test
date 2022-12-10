@@ -806,20 +806,19 @@ a:hover {
 
 .services {
   position: relative;
-  background: url(../img/services-bg.svg) no-repeat center 168px;
 }
 .services__container {
-  padding-bottom: 216px;
+  padding-bottom: 207px;
+}
+.services__line {
+  max-width: 1688px;
+  width: 100%;
+  height: 1938px;
 }
 .services__foreignObject {
   max-width: 1096px;
   width: 100%;
-  height: 330px;
-}
-.services__line {
-  max-width: 1938px;
-  width: 100%;
-  height: 1988px;
+  height: 320px;
 }
 .services__bg {
   position: absolute;
@@ -843,61 +842,61 @@ a:hover {
   text-align: center;
   margin-bottom: 60px;
 }
-.services__list {
+.services__column {
   display: flex;
   flex-direction: column;
-  justify-items: flex-start;
 }
-.services__card {
+.services__row {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
+  max-width: 1096px;
+  width: 100%;
 }
-.services__card:not(:last-child) {
-  padding-bottom: 95px;
+.services__row:not(:last-child) {
+  padding-bottom: 98px;
 }
 
-.card-services__content {
-  width: 573px;
-  margin-left: 141px;
+.row-services__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 573px;
+  width: 100%;
 }
-.card-services__title {
+.row-services__title {
   font-family: Roboto-Bold;
   font-size: 24px;
   line-height: 120%;
   text-transform: uppercase;
   margin-bottom: 34px;
 }
-.card-services__text {
+.row-services__text {
   font-family: Roboto-Regular;
   font-size: 16px;
   line-height: 150%;
   margin-bottom: 38px;
 }
-.card-services__btn {
+.row-services__btn {
+  align-self: flex-end;
   width: 166px;
   height: 39px;
   border: 1px solid #DC911B;
   border-radius: 5px;
-  justify-self: flex-end;
   transition: 0.2s ease-in-out;
 }
-.card-services__btn:hover {
+.row-services__btn:hover {
   background: #DC911B;
   color: #fff;
 }
-.card-services_revert {
-  margin-left: auto;
+.row-services_revert {
+  max-width: 1087px;
+  width: 100%;
+  align-self: flex-end;
 }
-.card-services_revert .card-services__img {
+.row-services_revert .row-services__img {
   order: 2;
-  margin-left: 179px;
 }
-.card-services_revert .card-services__content {
-  margin-left: 123px;
-}
-
 .reviews {
   background: #3E3E3D;
 }
