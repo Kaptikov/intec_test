@@ -99,25 +99,7 @@ burger?.addEventListener('click', () => {
   // burger?.classList.toggle('burger--active')
   burger?.classList.toggle('burger-btn--active')
   menu?.classList.toggle('header__burger--visible')
-  logo?.classList.toggle('burger-menu__logo--visible')
-
-  if (burger.classList.contains('burger--active')) {
-    menuTxt.innerHTML = 'Закрыть'
-  } else {
-    menuTxt.innerHTML = 'Меню'
-  }
 })
-
-// burger?.addEventListener('click', () => {
-//   body.classList.toggle('stop--scroll')
-//   burger?.classList.toggle('burger--active')
-//   menu?.classList.toggle('header__menu--hidden')
-//   if (burger.classList.contains('burger--active')) {
-//     menuTxt.innerHTML = 'Закрыть'
-//   } else {
-//     menuTxt.innerHTML = 'Меню'
-//   }
-// })
 
 menuItems.forEach(el => {
   el.addEventListener('click', () => {
