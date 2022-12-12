@@ -1,23 +1,10 @@
 .services {
   position: relative;
-  // background: url(../img/services-bg.svg) no-repeat center 173px;
+  background: url(../img/services-bg.svg) no-repeat center 173px;
 
   // .services__container
   &__container {
     padding-bottom: 207px;
-    // z-index: 3;
-  }
-
-  &__line {
-    max-width: 1688px;
-    width: 100%;
-    height: 1938px;
-  }
-
-  &__foreignObject {
-    max-width: 1096px;
-    width: 100%;
-    height: 320px;
   }
 
   &__bg {
@@ -61,13 +48,17 @@
     width: 100%;
   }
 
+  &__row .row-services__img {
+    margin-right: 30px;
+  }
+
   &__row:not(:last-child) {
     padding-bottom: 98px;
   }
 
-  // &__row:first-child {
-  //   padding-bottom: 79px;
-  // }
+  &__row:last-child {
+    padding-top: 10px;
+  }
 }
 
 .title {}
@@ -76,6 +67,11 @@
 
   // .row-services__img
   &__img {}
+
+  &__img img {
+    min-width: 300px;
+    width: 100%;
+  }
 
   // .row-services__content
   &__content {
@@ -103,8 +99,11 @@
     margin-bottom: 38px;
   }
 
-  // .row-services__btn
-  &__btn {
+  // .row-services__link
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     align-self: flex-end;
     width: 166px;
     height: 39px;
@@ -113,7 +112,7 @@
     transition: 0.2s ease-in-out;
   }
 
-  &__btn:hover {
+  &__link:hover {
     background: #DC911B;
     color: #fff;
   }
@@ -126,7 +125,47 @@
 
   &_revert .row-services__img {
     order: 2;
+    margin-right: 0;
+    margin-left: 30px;
   }
 
   &_revert .row-services__content {}
+}
+
+@media (max-width: 1232px) {
+  .services {
+    background: transparent;
+
+    &__title {
+      @include adaptiv-font(36, 27);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    &__container {
+      padding-bottom: 100px;
+    }
+
+    &__row {
+      flex-direction: column;
+    }
+
+    &__row:not(:last-child) {
+      padding-bottom: 30px;
+    }
+
+    &__row .row-services__img {
+      order: 1;
+      margin-right: 0;
+      display: none;
+    }
+  }
+
+  .row-services {
+    &_revert .row-services__img {
+      margin-left: 0;
+    }
+  }
 }

@@ -58,58 +58,9 @@ a:hover {
   font-size: 36px;
   line-height: 120%;
   text-transform: uppercase;
-  @include adaptiv-font(36, 24);
+  @include adaptiv-font(36, 27);
 }
 
-.swiper {
-  // width: 820px;
-  // height: 341px;
-}
-
-// .swiper-button-next::after,
-// .swiper-button-prev::after {
-//   content: "";
-// }
-
-// .swiper-button-next,
-// .swiper-button-prev {
-//   border: 1px solid $hoverColor;
-//   border-radius: 50%;
-//   width: 49px;
-//   height: 49px;
-//   transition: scale 0.3s ease-in-out;
-//   color: #BAA174;
-
-//   &:hover {
-//     scale: 122%;
-//   }
-// }
-
-// @media (max-width: 768px) {
-
-//   .swiper-button-next,
-//   .swiper-button-prev {
-//     border: 1px solid #E1C39D;
-//     width: 31px;
-//     height: 31px;
-//     // text-align: center;
-//   }
-
-//   .swiper-button-next svg {
-//     width: 15px;
-//     color: #E1C39D;
-//   }
-
-//   .swiper-button-prev svg {
-//     width: 15px;
-//     color: #E1C39D;
-//   }
-// }
-
-
-// .swiper-button-prev {
-//   transform: rotate(180deg);
-// }
 .swiper {
   &__navigation {
     position: absolute;
@@ -179,7 +130,6 @@ a:hover {
 
   &__view-all {
     display: flex;
-    // justify-content: center;
     align-self: flex-end;
     align-items: center;
     justify-content: flex-end;
@@ -187,7 +137,6 @@ a:hover {
     font-size: 18px;
     line-height: 120%;
     text-transform: uppercase;
-    // margin-top: 7.8%;
     margin-top: -14px;
     width: max-content;
 
@@ -202,25 +151,9 @@ a:hover {
 }
 
 ._ibg img {
-  // position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   object-fit: cover;
 }
-
-// $maxWidth: 1230;
-
-// @mixin adaptiv-font($pcSize, $mobSize) {
-//   $addSize: $pcSize - $mobSize;
-//   $addMobSize: $addSize + $addSize * 0.7;
-
-//   @media (max-width: 767px) {
-//     font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
-//   }
-
-//   @media (min-width: 767px) {
-//     font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
-//   }
-// }

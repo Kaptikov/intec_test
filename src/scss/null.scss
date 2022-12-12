@@ -51,6 +51,10 @@ textarea {
   font-size: inherit;
 }
 
+input[type=text]::-ms-clear {
+  display: none;
+}
+
 button {
   cursor: pointer;
   color: inherit;

@@ -1,6 +1,8 @@
 .feedback {
   position: relative;
 
+  background: url(../img/feedback-line.svg) center 143px no-repeat;
+
   // .feedback__container
   &__container {
     display: flex;
@@ -42,24 +44,22 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    // justify-content: center;
     align-items: center;
-    // background-color: #FFE0B0;
     max-width: 617px;
     width: 100%;
     margin: 214px 0 168px 0;
     z-index: 2;
   }
 
-  &__line {
-    position: absolute;
-    top: 143px;
-    left: 0;
-  }
+  // &__line {
+  //   position: absolute;
+  //   top: 143px;
+  //   left: 0;
+  // }
 
-  &__line svg {
-    width: 100%;
-  }
+  // &__line svg {
+  //   width: 100%;
+  // }
 }
 
 .form-feedback {

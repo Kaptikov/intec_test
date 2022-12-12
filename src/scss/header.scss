@@ -1,9 +1,3 @@
-// @keyframes linearGradientMove {
-//   100% {
-//     background-position: 12.5% 0, -12.5% 100%, 0 -12.5%, 100% 12.5%;
-//   }
-// }
-
 .header {
   position: absolute;
   top: 18px;
@@ -20,14 +14,10 @@
   }
 
   // .header__logo
-  &__logo {
-    // margin-right: 65.22px;
-  }
+  &__logo {}
 
   // .header__menu
-  &__menu {
-    // margin-right: 67px;
-  }
+  &__menu {}
 
   // .header__contacts
   &__contacts {
@@ -35,9 +25,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
-    // width: 192px;
     height: 42px;
-    // padding-right: 18px;
   }
 
   // .header__contacts-tel
@@ -64,45 +52,15 @@
     font-size: 12px;
     line-height: 18px;
     color: #2D2D2D;
-    // outline: 1px dashed #2D2D2D;
-    // outline-offset: -1px;
-    transition: outline .5s;
-    // border-bottom: 1px dashed #2D2D2D;
     text-decoration: underline;
     text-decoration-style: dashed;
     text-underline-position: under;
     margin-right: 23px;
 
     &:hover {
-      // border-bottom: none;
       text-decoration: none;
     }
-
-    // &:hover {
-    //   // text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-    //   // box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
-    //   outline: none;
-    //   border-bottom: none;
-    //   background:
-    //     linear-gradient(90deg, #2D2D2D 50%, transparent 0) repeat-x,
-    //     linear-gradient(90deg, #2D2D2D 50%, transparent 0) repeat-x,
-    //     linear-gradient(0deg, #2D2D2D 50%, transparent 0) repeat-y,
-    //     linear-gradient(0deg, #2D2D2D 50%, transparent 0) repeat-y;
-    //   background-size: 0 0, 5px 1px, 0 0, 0 0;
-    //   background-position: 0 0, 0 100%, 0 0, 100% 0;
-    //   animation: linearGradientMove .5s infinite linear;
-    // }
   }
-
-  // &__contacts-call::after {
-  //   content: "";
-  //   position: absolute;
-  //   bottom: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   border: 1px dashed #2D2D2D;
-  //   animation: dashed-line infinite linear;
-  // }
 
   &__contacts-call:hover .header__arrow {
     animation-name: dashed-line;
@@ -126,7 +84,12 @@
   }
 
   // .menu__item
-  &__item {}
+  &__item {
+
+    &:hover {
+      color: $bgColor;
+    }
+  }
 
   &__item:not(:last-child) {
     margin-right: 42px;
@@ -221,8 +184,6 @@
       background: #fff;
       transform: translateX(100%);
       transition: transform 0.6s ease-in-out;
-      // z-index: 10;
-      // max-height: 500px;
       overflow-y: auto;
     }
 
@@ -316,6 +277,10 @@
       // .menu__item
       &__item {
         font-size: 21px;
+
+        &:hover {
+          color: $bgColor;
+        }
       }
 
       &__item:not(:last-child) {

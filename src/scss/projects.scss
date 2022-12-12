@@ -31,7 +31,6 @@
 
   &__link {
     display: flex;
-    // justify-content: center;
     align-self: flex-end;
     align-items: center;
     justify-content: flex-end;
@@ -39,8 +38,8 @@
     font-size: 18px;
     line-height: 120%;
     text-transform: uppercase;
-    // margin-top: 7.8%;
     margin-top: -14px;
+    margin-bottom: 88px;
     width: max-content;
 
     &:hover {
@@ -126,15 +125,11 @@
 
     // .block-projects__title
     &__title {
-      // position: relative;
-      // margin-bottom: 30px;
       top: 0;
     }
 
     // .block-projects__img
-    &__img {
-      // min-width: 556px;
-    }
+    &__img {}
 
     // .block-projects__text
     &__text {}
@@ -154,20 +149,12 @@
 
     &__container {}
 
-    &__block {
-      // max-width: 556px;
-      // flex-wrap: wrap;
-    }
   }
 
   .block-projects {
     &__img {}
 
-    &__text {
-      // padding-top: 30px;
-      // margin-left: 0;
-      // max-width: 100%;
-    }
+    &__text {}
   }
 }
 
