@@ -1,0 +1,146 @@
+.feedback {
+  position: relative;
+
+  background: url(../img/feedback-line.svg) center 143px no-repeat;
+
+  // .feedback__container
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // .feedback__img
+  &__img {
+    position: absolute;
+  }
+
+  // .feedback__img-left
+  &__img-left {
+    top: -73px;
+    left: -82px;
+    z-index: 1;
+  }
+
+  // .feedback__img-right
+  &__img-right {
+    top: -61px;
+    right: -40px;
+    z-index: 3;
+  }
+
+  &__mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFE0B0;
+    z-index: 1;
+  }
+
+  // .feedback__form
+  &__form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 617px;
+    width: 100%;
+    margin: 214px 0 168px 0;
+    z-index: 2;
+  }
+
+  // &__line {
+  //   position: absolute;
+  //   top: 143px;
+  //   left: 0;
+  // }
+
+  // &__line svg {
+  //   width: 100%;
+  // }
+}
+
+.form-feedback {
+
+  // .form-feedback__title
+  &__title {
+    font-family: Roboto-Bold;
+    font-size: 24px;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin: 28px 0 11px 0;
+    z-index: 2;
+  }
+
+  // .form-feedback__text
+  &__text {
+    font-size: 14px;
+    line-height: 120%;
+    margin: 0 0 24px 0;
+    z-index: 2;
+  }
+
+  // .form-feedback__input
+  &__input {
+    font-family: Scada;
+    font-size: 12px;
+    line-height: 120%;
+    background: transparent;
+    border-bottom: 1px solid #3E3E3D;
+    padding: 6px 10px;
+    max-width: 142px;
+    font-size: 12px;
+    outline: none;
+    transition: border-bottom 0.2s ease-in-out;
+
+    &:focus {
+      border-bottom: 1px solid #DC911B;
+    }
+  }
+
+  &__input &:first-child {
+    margin-right: 54px;
+
+  }
+
+  &__fieldset {
+    margin-bottom: 40px;
+    z-index: 2;
+  }
+
+  // .form-feedback__btn
+  &__btn {
+    position: relative;
+    margin-bottom: -17px;
+    width: 161px;
+    height: 39px;
+    font-size: 14px;
+    line-height: 120%;
+    background: transparent;
+    border: 1px solid #DC911B;
+    border-radius: 5px;
+    z-index: 2;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      background: #DC911B;
+      border: 1px solid #000;
+    }
+  }
+}
+
+.form {
+
+  // .form__feedback
+  &__feedback {}
+}
+
+@media (max-width: 556px) {
+  .feedback {
+    &__img-right {
+      z-index: 1;
+    }
+  }
+}

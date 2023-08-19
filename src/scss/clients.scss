@@ -1,0 +1,24 @@
+.clients {
+
+  // .clients__container
+  &__container {}
+
+  // .clients__title
+  &__title {
+    margin: 57px 0 120px 17.09%;
+  }
+
+  // .clients__items
+  &__items {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    justify-items: center;
+    gap: 120px 80px;
+    grid-auto-flow: row;
+    padding: 0 38px;
+  }
+
+  // .clients__item
+  &__item {}
+}

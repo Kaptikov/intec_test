@@ -1,0 +1,69 @@
+.useful-article {
+
+  // .useful-article__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 90px;
+  }
+
+  // .useful-article__title
+  &__title {
+    margin-bottom: 90px;
+  }
+
+  // .useful-article__wrapper
+  &__wrapper {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+    justify-items: center;
+    gap: 40px 53px;
+    grid-auto-flow: row;
+    padding: 0 30px;
+  }
+
+  // .useful-article__block
+  &__block {}
+
+  // .useful-article__link
+  &__link {
+    margin-top: 60px;
+  }
+}
+
+.block-article {
+
+  // .block-article__item
+  &__item {}
+
+  // .block-article__title
+  &__title {
+    font-family: Montserrat-Bold;
+    font-size: 16px;
+    line-height: 131%;
+    margin-bottom: 10px;
+  }
+
+  // .block-article__date
+  &__date {
+    font-family: Montserrat-Light;
+    font-size: 12px;
+    line-height: 175%;
+    color: #C6C6C6;
+  }
+
+  // .block-article__text
+  &__text {
+    font-family: Montserrat-Medium;
+    font-size: 12px;
+    line-height: 175%;
+    margin-top: 10px;
+  }
+}
+
+.link {
+
+  // .link__view-all
+  &__view-all {}
+}

@@ -1,0 +1,159 @@
+$bgColor: #DC911B;
+$bgColorGray: #3E3E3D;
+$hoverColor: #BAA174;
+
+$fontSize: 16px;
+
+$lineHeight: 24px;
+
+$maxWidth: 1230;
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $addMobSize: $addSize + $addSize * 0.7;
+
+  @media (max-width: 767px) {
+    font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
+  }
+
+  @media (min-width: 767px) {
+    font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+  }
+}
+
+// $letterSpacing: 1%;  
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+._container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 15px;
+  box-sizing: content-box;
+}
+
+._container--1372 {
+  max-width: 1372px;
+  margin: 0 auto;
+  padding: 0px 15px;
+  box-sizing: content-box;
+}
+
+a:hover {
+  // color: $hoverColor;
+  transition: 0.15s;
+}
+
+.page {
+  flex: 1 1 auto;
+}
+
+.title {
+  font-family: Roboto-Bold;
+  font-size: 36px;
+  line-height: 120%;
+  text-transform: uppercase;
+  @include adaptiv-font(36, 27);
+}
+
+.swiper {
+  &__navigation {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 68px;
+  }
+
+  // .reviews__swiper-button-prev
+  &-button-prev {
+    transform: rotateY(-180deg);
+    left: 0;
+  }
+
+  // .reviews__swiper-button-next
+  &-button-next {
+    right: 0;
+  }
+
+  &-button-prev,
+  &-button-next {
+    position: relative;
+    margin: 0;
+    content: "";
+    top: 0;
+    color: #000;
+    background: #C4C4C4;
+    width: 34px;
+    height: 34px;
+    transition: 0.2s ease-in-out;
+
+    &::after {
+      content: "";
+    }
+
+    &:hover {
+      background: $bgColor;
+    }
+  }
+}
+
+.stop--scroll {
+  overflow: hidden;
+}
+
+.link {
+  &__view-more {
+    bottom: 4px;
+    right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    background: $bgColor;
+  }
+
+  &__view-more:hover {
+    background: transparent;
+    border: 1px solid $bgColor;
+    color: $bgColor;
+  }
+
+  &__view-all {
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: Roboto-Bold;
+    font-size: 18px;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-top: -14px;
+    width: max-content;
+
+    &:hover {
+      color: $bgColor;
+    }
+  }
+}
+
+._ibg {
+  position: relative;
+}
+
+._ibg img {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
